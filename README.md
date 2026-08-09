@@ -40,19 +40,32 @@ Then open http://localhost:8000
 
 ## Deployment
 
-Live at **https://jay6430.github.io/unplugged-band-website/**, served by GitHub Pages
-from the `main` branch (root). Every push to `main` redeploys.
+The site is deployed from `main` to two hosts, both of which redeploy on every push:
 
-To move it to a custom domain (e.g. `theunpluggedband.com`):
+| Host | URL | Role |
+|---|---|---|
+| **Vercel** | https://theunpluggedband.vercel.app/ | Primary — this is the URL to share |
+| GitHub Pages | https://jay6430.github.io/unplugged-band-website/ | Backup / mirror |
 
-1. Register the domain, then create a `CNAME` file in the repo root containing just
-   the domain (one line, no protocol).
-2. At your DNS registrar add either:
-   - four `A` records for the apex domain → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - or a `CNAME` record for `www` → `<username>.github.io`
-3. In the repo: **Settings → Pages → Custom domain**, enter the domain and tick **Enforce HTTPS**.
-4. Update the `canonical` / `og:url` / `og:image` tags and the JSON-LD block in `index.html`,
-   plus `robots.txt` and `sitemap.xml`, to the new domain.
+Vercel serves the repo as-is (no build step); `vercel.json` sets `cleanUrls`,
+long-lived caching for `assets/`, and basic security headers.
+
+### Moving to a custom domain
+
+`theunpluggedband.com` was available as of August 2026 but is **not registered yet**.
+Note that a `CNAME` file only ever works once the domain is actually registered and its
+DNS points at the host — adding one for an unowned domain takes the site offline.
+
+**On Vercel** (simplest): Project → Settings → Domains → add the domain, then create the
+DNS records Vercel shows you at your registrar.
+
+**On GitHub Pages** instead: add a `CNAME` file containing just the domain, then at your
+registrar add either four `A` records for the apex (`185.199.108.153`, `185.199.109.153`,
+`185.199.110.153`, `185.199.111.153`) or a `CNAME` for `www` → `jay6430.github.io`, and
+set the domain under **Settings → Pages** with **Enforce HTTPS** ticked.
+
+Either way, finish by updating the `canonical` / `og:url` / `og:image` tags and the JSON-LD
+block in `index.html`, plus `robots.txt` and `sitemap.xml`, to the new domain.
 
 ## Contacts
 
