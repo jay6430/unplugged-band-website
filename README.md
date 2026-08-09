@@ -40,15 +40,19 @@ Then open http://localhost:8000
 
 ## Deployment
 
-Hosted on GitHub Pages from the `main` branch.
+Live at **https://jay6430.github.io/unplugged-band-website/**, served by GitHub Pages
+from the `main` branch (root). Every push to `main` redeploys.
 
-To point a custom domain (e.g. `theunpluggedband.com`) at it:
+To move it to a custom domain (e.g. `theunpluggedband.com`):
 
-1. Create a `CNAME` file in the repo root containing just the domain (one line, no protocol).
+1. Register the domain, then create a `CNAME` file in the repo root containing just
+   the domain (one line, no protocol).
 2. At your DNS registrar add either:
    - four `A` records for the apex domain → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - or a `CNAME` record for `www` → `<username>.github.io`
 3. In the repo: **Settings → Pages → Custom domain**, enter the domain and tick **Enforce HTTPS**.
+4. Update the `canonical` / `og:url` / `og:image` tags and the JSON-LD block in `index.html`,
+   plus `robots.txt` and `sitemap.xml`, to the new domain.
 
 ## Contacts
 
