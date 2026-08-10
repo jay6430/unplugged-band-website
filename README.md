@@ -77,13 +77,13 @@ block in `index.html`, plus `robots.txt` and `sitemap.xml`, to the new domain.
 
 ## The Band
 
+- **Kunj Desai** — Band Manager (bookings) — +91 70690 01861
 - **Rajat Lad** — Lead Singer & Guitar — [@ladrajat_live](https://www.instagram.com/ladrajat_live/)
 - **Vishal Patel** — Musician — [@vishal6050.vp](https://www.instagram.com/vishal6050.vp/)
 - **Kunjan Patel** — Drummer — [@ftw.kunju_](https://www.instagram.com/ftw.kunju_/)
 - **Aishan Mistry** — Lead Percussionist — [@aishanmistry](https://www.instagram.com/aishanmistry/)
 - **Jay Patel** — Guitarist / Bassist — [@jordan_jayp](https://www.instagram.com/jordan_jayp/)
-- **Dev** — Theater Keyboardist & Arranger — [@dev_keysss](https://www.instagram.com/dev_keysss/)
-- **Kunj Desai** — Band Manager
+- **Dev Patel** — Theater Keyboardist & Arranger — [@dev_keysss](https://www.instagram.com/dev_keysss/)
 
 ---
 

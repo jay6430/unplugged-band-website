@@ -78,18 +78,19 @@ input, select, textarea { font: inherit; }
   position: fixed; inset: 0; z-index: 9999;
   display: grid; place-items: center;
   background: var(--ink);
-  transition: opacity 0.7s var(--ease), visibility 0.7s;
+  transition: opacity 0.45s var(--ease), visibility 0.45s;
 }
 .preloader.is-done { opacity: 0; visibility: hidden; }
 .preloader__inner { display: grid; justify-items: center; gap: 22px; }
 .preloader__logo {
   width: 108px; height: 108px; border-radius: 50%;
-  animation: spinPulse 2.4s var(--ease) infinite;
+  animation: discSpin 2.2s linear infinite;
   box-shadow: 0 0 60px rgba(255, 249, 82, 0.28);
 }
-@keyframes spinPulse {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50%      { transform: scale(1.06) rotate(8deg); }
+/* Record on a turntable: one continuous revolution, constant speed. */
+@keyframes discSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 .preloader__bars { display: flex; gap: 5px; align-items: flex-end; height: 30px; }
 .preloader__bars span {
@@ -337,11 +338,8 @@ input, select, textarea { font: inherit; }
   width: clamp(300px, 34vw, 500px); border-radius: 50%;
   opacity: 0.92;
   filter: drop-shadow(0 0 80px rgba(255, 249, 82, 0.3));
-  animation: heroFloat 9s ease-in-out infinite;
-}
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0) rotate(-3deg); }
-  50%      { transform: translateY(-22px) rotate(3deg); }
+  /* Slow, constant-speed revolution — a record on the deck rather than a float. */
+  animation: discSpin 18s linear infinite;
 }
 
 .hero__scroll {
@@ -616,11 +614,32 @@ input, select, textarea { font: inherit; }
    ============================================================ */
 .booking__grid {
   display: grid; grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "intro form"
+    "aside form";
   gap: clamp(36px, 6vw, 70px); align-items: start;
+  column-gap: clamp(36px, 5vw, 64px);
 }
-.booking__info .section__title,
-.booking__info .section__eyebrow { text-align: left; }
-.booking__info > p { color: var(--text-dim); margin-bottom: 30px; }
+.booking__intro { grid-area: intro; }
+.booking__aside { grid-area: aside; }
+.booking__form  { grid-area: form; }
+
+.booking__intro .section__title,
+.booking__intro .section__eyebrow { text-align: left; }
+.booking__intro > p { color: var(--text-dim); }
+
+.booking__aside-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-dim); margin-bottom: 12px;
+}
+.btn--call {
+  width: 100%; justify-content: center; margin-bottom: 18px;
+  background: transparent; color: var(--yellow);
+  border: 1.5px solid var(--yellow);
+}
+.btn--call:hover { background: var(--yellow); color: var(--ink); }
+
 .booking__contacts { display: grid; gap: 12px; }
 .contact-card {
   display: grid; gap: 3px; padding: 17px 20px;
@@ -755,7 +774,16 @@ input, select, textarea { font: inherit; }
 @media (max-width: 1024px) {
   .about__grid { grid-template-columns: 1fr; }
   .about__visual { max-width: 340px; margin-inline: auto; }
-  .booking__grid { grid-template-columns: 1fr; }
+  /* Single column: put the enquiry form directly under the heading so the
+     "Book the band" CTA lands on it, with the phone numbers below. */
+  .booking__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "form"
+      "aside";
+    gap: 30px;
+  }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
   .hero__logo { opacity: 0.18; }
@@ -788,7 +816,10 @@ input, select, textarea { font: inherit; }
   .footer__inner { grid-template-columns: 1fr; }
   .footer__brand { flex-direction: column; }
   .footer__bar-inner { flex-direction: column; text-align: center; }
-  .hero__actions .btn { flex: 1 1 100%; }
+  /* Primary CTA full width; "Call now" and "Watch us live" share the row below. */
+  .hero__actions { gap: 10px; }
+  .hero__actions .btn--primary { flex: 1 1 100%; }
+  .hero__actions .btn--ghost { flex: 1 1 calc(50% - 5px); justify-content: center; }
   .hero__stats { gap: 20px 34px; }
   .timeline { padding-left: 28px; }
   .timeline__marker { left: -28px; width: 15px; height: 15px; }

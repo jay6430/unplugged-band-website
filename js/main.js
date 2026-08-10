@@ -10,9 +10,9 @@
   /* ---------- preloader ---------- */
   const preloader = $("#preloader");
   window.addEventListener("load", () => {
-    setTimeout(() => preloader.classList.add("is-done"), 600);
+    setTimeout(() => preloader.classList.add("is-done"), 250);
   });
-  setTimeout(() => preloader.classList.add("is-done"), 4000);
+  setTimeout(() => preloader.classList.add("is-done"), 2000);
 
   /* ---------- sticky nav ---------- */
   const nav = $("#nav");
