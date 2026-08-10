@@ -1,5 +1,5 @@
 /* ============================================================
-   The Unplugged Band — theunpluggedband.com
+   The Unplugged Band, theunpluggedband.com
    Developed & managed by Jay Kadam
    ============================================================ */
 
@@ -338,7 +338,7 @@ input, select, textarea { font: inherit; }
   width: clamp(300px, 34vw, 500px); border-radius: 50%;
   opacity: 0.92;
   filter: drop-shadow(0 0 80px rgba(255, 249, 82, 0.3));
-  /* Slow, constant-speed revolution — a record on the deck rather than a float. */
+  /* Slow, constant-speed revolution: a record on the deck rather than a float. */
   animation: discSpin 18s linear infinite;
 }
 
@@ -769,11 +769,158 @@ input, select, textarea { font: inherit; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* ============================================================
+   STORY TEASER (home page)
+   ============================================================ */
+.story-teaser { padding: clamp(50px, 6vw, 76px) 0; }
+.story-teaser__inner {
+  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: clamp(26px, 4vw, 54px);
+  padding: clamp(30px, 4vw, 48px) clamp(26px, 4vw, 52px);
+  background: linear-gradient(120deg, var(--ink-2), var(--ink-3));
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+.story-teaser__inner::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(600px 200px at 88% 50%, var(--yellow-soft), transparent 70%);
+  pointer-events: none;
+}
+.story-teaser__body { position: relative; z-index: 1; }
+.story-teaser__eyebrow {
+  font-family: var(--font-display); font-size: 0.76rem;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 12px;
+}
+.story-teaser h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.6rem, 3.4vw, 2.5rem); line-height: 1.06;
+  letter-spacing: 0.01em; text-transform: uppercase; margin-bottom: 14px;
+}
+.story-teaser p { color: var(--text-dim); max-width: 60ch; margin-bottom: 22px; }
+.story-teaser__disc { position: relative; z-index: 1; width: clamp(96px, 13vw, 150px); }
+.story-teaser__disc img {
+  width: 100%; border-radius: 50%;
+  animation: discSpin 18s linear infinite;
+  filter: drop-shadow(0 0 40px rgba(255, 249, 82, 0.28));
+}
+
+/* ============================================================
+   STORY PAGE
+   ============================================================ */
+.story-hero {
+  position: relative; overflow: hidden;
+  padding: clamp(140px, 17vw, 210px) 0 clamp(56px, 7vw, 84px);
+}
+.story-hero__bg { position: absolute; inset: 0; z-index: 0; }
+.story-hero__inner { position: relative; z-index: 2; max-width: 900px; }
+.story-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-size: 0.8rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow);
+  padding: 9px 18px; border: 1px solid var(--line); border-radius: 100px;
+  background: rgba(255, 249, 82, 0.05); margin-bottom: 26px;
+}
+.story-hero__title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(2.3rem, 7vw, 5rem); line-height: 0.94;
+  letter-spacing: 0.005em; text-transform: uppercase; margin-bottom: 26px;
+}
+.story-hero__title .line { display: block; }
+.story-hero__title .line--accent { color: var(--yellow); }
+.story-hero__lede {
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem); max-width: 62ch;
+  line-height: 1.62; margin-bottom: 14px;
+}
+.story-hero__note { color: var(--text-dim); max-width: 62ch; margin-bottom: 40px; }
+.story-hero__stats { display: flex; flex-wrap: wrap; gap: 26px 46px; }
+
+.story__wrap { max-width: 780px; }
+.story__chapter { padding-bottom: clamp(40px, 5vw, 62px); }
+.story__chapter:last-child { padding-bottom: 0; }
+.story__year {
+  display: inline-block; font-family: var(--font-display);
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink); background: var(--yellow);
+  padding: 5px 13px; border-radius: 100px; margin-bottom: 16px;
+}
+.story__chapter h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.5rem, 3.4vw, 2.35rem); line-height: 1.08;
+  text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 18px;
+}
+.story__chapter p { color: var(--text-dim); margin-bottom: 16px; line-height: 1.75; }
+.story__chapter p:last-child { margin-bottom: 0; }
+.story__beat {
+  color: var(--text) !important; font-weight: 500;
+  font-size: 1.06rem; padding-left: 16px;
+  border-left: 2px solid var(--yellow);
+}
+.story__quote {
+  margin: 26px 0; padding: 22px 26px;
+  background: var(--ink-2); border-left: 3px solid var(--yellow);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.story__quote p {
+  font-family: var(--font-script); font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--yellow) !important; margin: 0 !important; line-height: 1.3;
+}
+.story__list { list-style: none; margin: 4px 0 20px; display: grid; gap: 9px; }
+.story__list li {
+  position: relative; padding-left: 26px; color: var(--text-dim);
+}
+.story__list li::before {
+  content: "♪"; position: absolute; left: 0; top: 0; color: var(--yellow);
+}
+
+/* thank you */
+.thanks { background: var(--ink-2); border-block: 1px solid var(--line-soft); }
+.thanks__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px; max-width: 940px; margin-inline: auto;
+}
+.thanks__card {
+  padding: 26px 28px; background: var(--ink); border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  transition: transform 0.35s var(--ease), border-color 0.35s;
+}
+.thanks__card:hover { transform: translateY(-4px); border-color: var(--line); }
+.thanks__card--wide { grid-column: 1 / -1; }
+.thanks__tag {
+  display: block; font-family: var(--font-display);
+  font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 12px;
+}
+.thanks__card p { color: var(--text-dim); line-height: 1.72; margin-bottom: 14px; }
+.thanks__card p:last-child { margin-bottom: 0; }
+
+/* closing */
+.story-close__inner { max-width: 760px; margin-inline: auto; text-align: center; }
+.story-close__logo {
+  width: 108px; border-radius: 50%; margin-bottom: 28px;
+  animation: discSpin 18s linear infinite;
+  filter: drop-shadow(0 0 50px rgba(255, 249, 82, 0.3));
+}
+.story-close h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.7rem, 4.2vw, 3rem); line-height: 1.06;
+  text-transform: uppercase; margin-bottom: 22px;
+}
+.story-close p { color: var(--text-dim); line-height: 1.75; margin-bottom: 16px; }
+.story-close__sign {
+  font-family: var(--font-script); font-size: clamp(1.4rem, 3.2vw, 2rem);
+  color: var(--yellow) !important; margin: 26px 0 34px !important;
+}
+.story-close__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
   .about__grid { grid-template-columns: 1fr; }
   .about__visual { max-width: 340px; margin-inline: auto; }
+  .story-teaser__inner { grid-template-columns: 1fr; text-align: center; }
+  .story-teaser p { margin-inline: auto; }
+  .story-teaser__disc { order: -1; margin-inline: auto; }
   /* Single column: put the enquiry form directly under the heading so the
      "Book the band" CTA lands on it, with the phone numbers below. */
   .booking__grid {
@@ -824,6 +971,9 @@ input, select, textarea { font: inherit; }
   .timeline { padding-left: 28px; }
   .timeline__marker { left: -28px; width: 15px; height: 15px; }
   .to-top { right: 14px; bottom: 14px; }
+  .thanks__grid { grid-template-columns: 1fr; }
+  .story-hero__stats { gap: 18px 30px; }
+  .story-close__actions .btn { flex: 1 1 100%; justify-content: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
