@@ -40,32 +40,38 @@ Then open http://localhost:8000
 
 ## Deployment
 
-The site is deployed from `main` to two hosts, both of which redeploy on every push:
+The site is deployed from `main` and redeploys on every push.
 
-| Host | URL | Role |
-|---|---|---|
-| **Vercel** | https://theunpluggedband.vercel.app/ | Primary, this is the URL to share |
-| GitHub Pages | https://jay6430.github.io/unplugged-band-website/ | Backup / mirror |
+| URL | Role |
+|---|---|
+| **https://theunpluggedband.com/** | **Live site. This is the URL to share.** |
+| https://www.theunpluggedband.com/ | 308 redirect to the apex |
+| https://theunpluggedband.vercel.app/ | 308 redirect to the apex |
+| https://jay6430.github.io/unplugged-band-website/ | Backup mirror, also built from `main` |
 
 Vercel serves the repo as-is (no build step); `vercel.json` sets `cleanUrls`,
 long-lived caching for `assets/`, and basic security headers.
 
-### Moving to a custom domain
+### Domain and DNS
 
-`theunpluggedband.com` was available as of August 2026 but is **not registered yet**.
-Note that a `CNAME` file only ever works once the domain is actually registered and its
-DNS points at the host, adding one for an unowned domain takes the site offline.
+`theunpluggedband.com` was registered through GoDaddy on 11 August 2026 and renews
+annually. DNS stays at GoDaddy (nameservers `ns57`/`ns58.domaincontrol.com`); only the
+apex `A` record points at Vercel:
 
-**On Vercel** (simplest): Project → Settings → Domains → add the domain, then create the
-DNS records Vercel shows you at your registrar.
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `216.198.79.1` |
+| CNAME | `www` | `theunpluggedband.com` |
 
-**On GitHub Pages** instead: add a `CNAME` file containing just the domain, then at your
-registrar add either four `A` records for the apex (`185.199.108.153`, `185.199.109.153`,
-`185.199.110.153`, `185.199.111.153`) or a `CNAME` for `www` → `jay6430.github.io`, and
-set the domain under **Settings → Pages** with **Enforce HTTPS** ticked.
+Vercel issues and renews the Let's Encrypt certificate automatically. GoDaddy asks for
+SMS verification before saving any DNS change.
 
-Either way, finish by updating the `canonical` / `og:url` / `og:image` tags and the JSON-LD
-block in `index.html`, plus `robots.txt` and `sitemap.xml`, to the new domain.
+**Renewal matters:** a lapsed domain can be taken by someone else, so keep auto-renew on
+and make sure the billing card stays valid.
+
+If the apex ever needs repointing, change that one `A` record. Any change of domain also
+means updating the `canonical` / `og:url` / `og:image` tags and the JSON-LD block in
+`index.html` and `story.html`, plus `robots.txt` and `sitemap.xml`.
 
 ## Contacts
 
