@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
+<link rel="manifest" href="/site.webmanifest" />
 <link rel="canonical" href="https://theunpluggedband.com/" />
 
 <meta property="og:type" content="website" />
@@ -29,10 +29,9 @@
 <meta property="og:image" content="https://theunpluggedband.com/assets/images/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="preload" href="/assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/outfit-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/style.css" />
 
 <script type="application/ld+json">
 {
@@ -159,7 +158,7 @@
 
 <div id="preloader" class="preloader">
   <div class="preloader__inner">
-    <img src="assets/images/logo-256.png" alt="" class="preloader__logo" />
+    <img src="/assets/images/logo-256.png" alt="" class="preloader__logo" width="256" height="256" />
     <div class="preloader__bars" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
@@ -172,7 +171,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#home" class="nav__brand" aria-label="The Unplugged Band, home">
-      <img src="assets/images/logo-128.png" alt="The Unplugged Band logo" width="46" height="46" />
+      <img src="/assets/images/logo-128.png" alt="The Unplugged Band logo" width="46" height="46" />
       <span class="nav__brand-text">
         <strong>The Unplugged Band</strong>
         <em>We Create Moments</em>
@@ -247,7 +246,7 @@
     </div>
 
     <div class="hero__logo-wrap" aria-hidden="true">
-      <img src="assets/images/logo-512.png" alt="" class="hero__logo" />
+      <img src="/assets/images/logo-512.png" alt="" class="hero__logo" width="512" height="512" fetchpriority="high" />
     </div>
 
     <a href="#about" class="hero__scroll" aria-label="Scroll to about">
@@ -285,7 +284,7 @@
     <div class="container about__grid">
       <div class="about__visual reveal">
         <div class="about__disc">
-          <img src="assets/images/logo-512.png" alt="The Unplugged Band logo" />
+          <img src="/assets/images/logo-512.png" alt="The Unplugged Band logo" width="512" height="512" loading="lazy" />
         </div>
         <div class="about__badge">
           <span>Est. 2021</span>
@@ -335,7 +334,7 @@
           </a>
         </div>
         <div class="story-teaser__disc" aria-hidden="true">
-          <img src="assets/images/logo-256.png" alt="" />
+          <img src="/assets/images/logo-256.png" alt="" width="256" height="256" loading="lazy" />
         </div>
       </div>
     </div>
@@ -802,7 +801,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="assets/images/logo-180.png" alt="The Unplugged Band logo" width="72" height="72" />
+      <img src="/assets/images/logo-180.png" alt="The Unplugged Band logo" width="72" height="72" loading="lazy" />
       <div>
         <strong>The Unplugged Band</strong>
         <em>"We create moments"</em>
@@ -854,6 +853,6 @@
 </button>
 
 <script async src="https://www.instagram.com/embed.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

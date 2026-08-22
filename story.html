@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
+<link rel="manifest" href="/site.webmanifest" />
 <link rel="canonical" href="https://theunpluggedband.com/story" />
 
 <meta property="og:type" content="article" />
@@ -26,10 +26,9 @@
 <meta property="og:image" content="https://theunpluggedband.com/assets/images/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="preload" href="/assets/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/outfit-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/style.css" />
 
 <script type="application/ld+json">
 {
@@ -55,7 +54,7 @@
 
 <div id="preloader" class="preloader">
   <div class="preloader__inner">
-    <img src="assets/images/logo-256.png" alt="" class="preloader__logo" />
+    <img src="/assets/images/logo-256.png" alt="" class="preloader__logo" width="256" height="256" />
     <div class="preloader__bars" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
@@ -68,7 +67,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__brand" aria-label="The Unplugged Band, home">
-      <img src="assets/images/logo-128.png" alt="The Unplugged Band logo" width="46" height="46" />
+      <img src="/assets/images/logo-128.png" alt="The Unplugged Band logo" width="46" height="46" />
       <span class="nav__brand-text">
         <strong>The Unplugged Band</strong>
         <em>We Create Moments</em>
@@ -349,7 +348,7 @@
   <!-- ================= CLOSING ================= -->
   <section class="story-close section">
     <div class="container story-close__inner">
-      <img src="assets/images/logo-256.png" alt="" class="story-close__logo" aria-hidden="true" />
+      <img src="/assets/images/logo-256.png" alt="" class="story-close__logo" aria-hidden="true" width="256" height="256" loading="lazy" />
       <h2 class="reveal">Not the end of five years.<br /><span class="text-accent">The beginning of many more.</span></h2>
       <p class="reveal">
         Many more stages. Many more artists joining this family. Many more songs, many more dreams, and
@@ -381,7 +380,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <img src="assets/images/logo-180.png" alt="The Unplugged Band logo" width="72" height="72" />
+      <img src="/assets/images/logo-180.png" alt="The Unplugged Band logo" width="72" height="72" loading="lazy" />
       <div>
         <strong>The Unplugged Band</strong>
         <em>"We create moments"</em>
@@ -429,6 +428,6 @@
   <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
