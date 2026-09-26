@@ -1,0 +1,62 @@
+[
+ {
+  "id": "rajat",
+  "name": "Rajat Lad",
+  "role": "Lead vocals &amp; guitar",
+  "card": "/assets/portfolio/members/rajat-1520.webp",
+  "full": "/assets/portfolio/members/rajat-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/rajat-420.webp 420w, /assets/portfolio/members/rajat-760.webp 760w, /assets/portfolio/members/rajat-1140.webp 1140w, /assets/portfolio/members/rajat-1520.webp 1520w"
+ },
+ {
+  "id": "vishal",
+  "name": "Vishal Patel",
+  "role": "Singer",
+  "card": "/assets/portfolio/members/vishal-1520.webp",
+  "full": "/assets/portfolio/members/vishal-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/vishal-420.webp 420w, /assets/portfolio/members/vishal-760.webp 760w, /assets/portfolio/members/vishal-1140.webp 1140w, /assets/portfolio/members/vishal-1520.webp 1520w"
+ },
+ {
+  "id": "kunjan",
+  "name": "Kunjan Patel",
+  "role": "Drums",
+  "card": "/assets/portfolio/members/kunjan-1520.webp",
+  "full": "/assets/portfolio/members/kunjan-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/kunjan-420.webp 420w, /assets/portfolio/members/kunjan-760.webp 760w, /assets/portfolio/members/kunjan-1140.webp 1140w, /assets/portfolio/members/kunjan-1520.webp 1520w"
+ },
+ {
+  "id": "aishan",
+  "name": "Aishan Mistry",
+  "role": "Lead percussion",
+  "card": "/assets/portfolio/members/aishan-1520.webp",
+  "full": "/assets/portfolio/members/aishan-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/aishan-420.webp 420w, /assets/portfolio/members/aishan-760.webp 760w, /assets/portfolio/members/aishan-1140.webp 1140w, /assets/portfolio/members/aishan-1520.webp 1520w"
+ },
+ {
+  "id": "jay",
+  "name": "Jay Patel",
+  "role": "Bass &amp; guitar",
+  "card": "/assets/portfolio/members/jay-1520.webp",
+  "full": "/assets/portfolio/members/jay-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/jay-420.webp 420w, /assets/portfolio/members/jay-760.webp 760w, /assets/portfolio/members/jay-1140.webp 1140w, /assets/portfolio/members/jay-1520.webp 1520w"
+ },
+ {
+  "id": "dev",
+  "name": "Dev Patel",
+  "role": "Keys &amp; arrangement",
+  "card": "/assets/portfolio/members/dev-1520.webp",
+  "full": "/assets/portfolio/members/dev-full.webp",
+  "cw": 1520,
+  "ch": 1900,
+  "srcset": "/assets/portfolio/members/dev-420.webp 420w, /assets/portfolio/members/dev-760.webp 760w, /assets/portfolio/members/dev-1140.webp 1140w, /assets/portfolio/members/dev-1520.webp 1520w"
+ }
+]
