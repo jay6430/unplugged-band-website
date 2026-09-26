@@ -93,5 +93,5 @@ means updating the `canonical` / `og:url` / `og:image` tags and the JSON-LD bloc
 
 ---
 
-Developed & managed by **Jay Kadam**.
+Site by **[Jay Kadam](https://kadamlabs.com)**.
 Band name, logo and all photography © The Unplugged Band.
