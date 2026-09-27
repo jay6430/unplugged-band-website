@@ -37,6 +37,19 @@
     });
   }
 
+  // Lift the button above the footer bar while the bar is in view.
+  const footerBar = $(".footer__bar");
+  if (toTop && footerBar && "IntersectionObserver" in window) {
+    const setLift = () =>
+      toTop.style.setProperty("--to-top-lift", footerBar.offsetHeight + 16 + "px");
+    setLift();
+    window.addEventListener("resize", setLift);
+    new IntersectionObserver(
+      ([en]) => toTop.classList.toggle("is-lifted", en.isIntersecting),
+      { threshold: 0 }
+    ).observe(footerBar);
+  }
+
   /* ---------- mobile menu ---------- */
   const toggle = $("#navToggle");
   const links = $("#navLinks");
