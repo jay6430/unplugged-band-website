@@ -1,5 +1,5 @@
 /* The Unplugged Band, site interactions
-   Site by Jay Kadam, kadamlabs.com
+   Site by Jay Kadam, kadamlabs.com, jay@kadamlabs.com
 
    Shared by every page, so each block guards for the elements it needs.
    The story page, for example, has no booking form. */

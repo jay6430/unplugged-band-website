@@ -1,5 +1,5 @@
 /* Live Instagram feed, client side.
-   Site by Jay Kadam, kadamlabs.com
+   Site by Jay Kadam, kadamlabs.com, jay@kadamlabs.com
 
    Asks /api/instagram for the latest posts and swaps them in over the
    hand-picked embeds already in the HTML. If the endpoint is missing, has no

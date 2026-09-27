@@ -1,5 +1,5 @@
 /* The Unplugged Band, portfolio interactions
-   Site by Jay Kadam, kadamlabs.com
+   Site by Jay Kadam, kadamlabs.com, jay@kadamlabs.com
 
    Architecture note: every expensive effect (pointer glow, tilt, tracing
    beam, parallax) is gated behind FX. Phones and reduced-motion users get

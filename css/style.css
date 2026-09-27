@@ -1,6 +1,6 @@
 /* ============================================================
    The Unplugged Band, theunpluggedband.com
-   Site by Jay Kadam, kadamlabs.com
+   Site by Jay Kadam, kadamlabs.com, jay@kadamlabs.com
    ============================================================ */
 
 /* Self-hosted fonts: no third-party connection on the critical path */
@@ -902,7 +902,9 @@ input, select, textarea { font: inherit; }
   gap: 18px; flex-wrap: wrap;
 }
 .footer__copy { color: var(--text-dim); font-size: 0.85rem; }
-.footer__credit { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; }
+.footer__credit { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.85rem; }
+.footer__mail { color: var(--text-dim); font-size: 0.82rem; letter-spacing: 0.01em; transition: color 0.25s; }
+.footer__mail:hover { color: var(--yellow); }
 .footer__credit-label { color: var(--text-dim); }
 .footer__dev {
   display: inline-flex; align-items: center; gap: 9px;

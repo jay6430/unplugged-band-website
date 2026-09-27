@@ -1,5 +1,5 @@
 /* Live Instagram feed for The Unplugged Band.
-   Site by Jay Kadam, kadamlabs.com
+   Site by Jay Kadam, kadamlabs.com, jay@kadamlabs.com
 
    The old Basic Display API was retired in December 2024, so this uses the
    Instagram API with Instagram Login (graph.instagram.com), which needs a
